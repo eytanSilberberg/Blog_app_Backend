@@ -21,6 +21,7 @@ db = MySQLdb.connect(
     "ca": "/etc/ssl/cert.pem"
   }
 )
+
 @router.get("/hpd/", response_model=HomePageData)
 def get_homepage_data():
     cursor = db.cursor()
